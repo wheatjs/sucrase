@@ -5,6 +5,7 @@ import identifyShadowedGlobals from "./identifyShadowedGlobals";
 import NameManager from "./NameManager";
 import {validateOptions} from "./Options";
 import {parse} from "./parser";
+import type {Token} from "./parser/tokenizer";
 import type {Scope} from "./parser/tokenizer/state";
 import TokenProcessor from "./TokenProcessor";
 import RootTransformer from "./transformers/RootTransformer";
@@ -61,6 +62,14 @@ export function transform(code: string, options: Options): TransformResult {
     }
     throw e;
   }
+}
+
+/**
+ * Return sucrase tokens
+ */
+export function getTokens(code: string, options: Options): Array<Token> {
+  const tokens = getSucraseContext(code, options).tokenProcessor.tokens;
+  return tokens;
 }
 
 /**

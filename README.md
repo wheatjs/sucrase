@@ -1,3 +1,11 @@
+> This is a fork of sucrase that exposdes a getTokens method
+
+```js
+import { getTokens } from '@wheatjs/sucrase'
+
+const tokens = getTokens(code, { transforms: [''] })
+```
+
 # Sucrase
 
 [![Build Status](https://github.com/alangpierce/sucrase/workflows/All%20tests/badge.svg)](https://github.com/alangpierce/sucrase/actions)

@@ -1,5 +1,5 @@
 {
-  "name": "sucrase",
+  "name": "@wheatjs/sucrase",
   "version": "3.20.3",
   "description": "Super-fast alternative to Babel for when you can target modern JS runtimes",
   "author": "Alan Pierce <alangpierce@gmail.com>",
